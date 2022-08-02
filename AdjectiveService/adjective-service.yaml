@@ -1,0 +1,37 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: adjective-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: adjective-service
+  ports:
+  - port: 53100
+    # targetPort: 53100
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: adjective-service
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: adjective-service
+  template:
+    metadata:
+      labels:
+        app: adjective-service
+    spec:
+      containers:
+      - name: adjective-service
+        image: sanjaygeorge16/adjective-service
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 53100
+
