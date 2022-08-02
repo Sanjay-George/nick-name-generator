@@ -12,13 +12,14 @@ app.get("/", (req, res) => {
     res.send(`Hello from ${name} running on ${os.hostname}`);
 });
 
-app.get("/service/:name", async (req, res) => {
+app.get("/service", async (req, res) => {
     const service = req.params.name;
     console.log(service);
     try {
         // NOTE: THIS WILL ONLY WORK WITH SERVICE DISCOVERY
-        const response = await fetch(`http://${service}/`);
-        console.log(response);
+        const response = await fetch(`http://adjective-service`);
+        const body = await response.text();
+        res.status(200).send(body);
     }
     catch(ex) {
         console.error(ex);

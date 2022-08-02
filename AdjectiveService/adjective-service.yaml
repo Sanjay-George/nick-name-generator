@@ -3,12 +3,11 @@ kind: Service
 metadata:
   name: adjective-service
 spec:
-  type: LoadBalancer
   selector:
     app: adjective-service
   ports:
-  - port: 53100
-    # targetPort: 53100
+  - port: 80
+    targetPort: 53100
 
 ---
 apiVersion: apps/v1
