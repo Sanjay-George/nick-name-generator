@@ -1,12 +1,19 @@
 import express from 'express';
 import os from 'os'
 import config from './config.js';
+import adjectives from './data.js';
 
 const app = express();
-const { port, name } = config;
+const { port, service } = config;
+
 
 app.get("/", (req, res) => {
-    res.send(`Hello from ${name} running on ${os.hostname}`);
+    const response = {
+        response: adjectives[Math.floor(Math.random() * adjectives.length)],
+        service: service,
+        hostname: os.hostname(),
+    };
+    res.send(response);
 });
 
 app.listen(port);
