@@ -7,7 +7,7 @@ docker rmi $(docker images --format "{{.Repository}}:{{.Tag}}"|findstr "adjectiv
 docker build -t adjective-service .
 
 # tag for prod 
-docker tag nick-name-generator sanjaygeorge16/adjective-service
+docker tag adjective-service sanjaygeorge16/adjective-service
 docker tag adjective-service sanjaygeorge16/adjective-service:v$version
 
 # push to docker hub

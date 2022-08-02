@@ -9,7 +9,7 @@ const { port, service } = config;
 
 app.get("/", (req, res) => {
     const response = {
-        response: adjectives[Math.floor(Math.random() * adjectives.length)],
+        response: adjectives[Math.floor(Math.random() * adjectives.length)].toLowerCase(),
         service: service,
         hostname: os.hostname(),
     };

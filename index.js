@@ -12,18 +12,22 @@ app.get("/", (req, res) => {
     res.send(`Hello from ${name} running on ${os.hostname}`);
 });
 
-app.get("/service", async (req, res) => {
+app.get("/service/:name", async (req, res) => {
     const service = req.params.name;
-    console.log(service);
+    // NOTE: THIS URL WILL ONLY WORK WITH SERVICE DISCOVERY
+    const url = `http://${service}`;
     try {
-        // NOTE: THIS WILL ONLY WORK WITH SERVICE DISCOVERY
-        const response = await fetch(`http://adjective-service`);
-        const body = await response.text();
+        const response = await fetch(url);
+        const body = await response.json();
         res.status(200).send(body);
     }
     catch(ex) {
         console.error(ex);
-        res.status(500).send('Interal server error');
+        res.status(500).send({
+            error: "Internal server error",
+            url: url, 
+            ex: ex,
+        });
     }
 });
 
