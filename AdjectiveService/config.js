@@ -1,4 +1,4 @@
 export default {
-    name: "adjective",
+    name: "adjective-service",
     port: 53100,
 };

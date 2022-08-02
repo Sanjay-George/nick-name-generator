@@ -6,7 +6,7 @@ const app = express();
 const { port, name } = config;
 
 app.get("/", (req, res) => {
-    res.send(`Hello from ${name} service running on ${os.hostname}`);
+    res.send(`Hello from ${name} running on ${os.hostname}`);
 });
 
 app.listen(port);
