@@ -4,13 +4,14 @@ import fetch from 'node-fetch';
 
 // TODO: read config based on environment variable - isDevEnv
 import config from './config.js';
+import ApiGateway from './apigateway.js';
 
 
 const app = express();
-const { port, name, services } = config;
+const { port, service, services } = config;
 
 app.get("/", (req, res) => {
-    res.send(`Hello from ${name} running on ${os.hostname}`);
+    res.send(`Hello from ${service} running on ${os.hostname}`);
 });
 
 app.get("/nick-name/", async (req, res) => {
@@ -18,30 +19,46 @@ app.get("/nick-name/", async (req, res) => {
     const colorService = services.color;
     const animalService = services.animal;
 
-    try{
-        const [adjRes, colorRes, animalRes] = await Promise.all([
-            fetch(`http://${adjectiveService}`),
-            fetch(`http://${colorService}`),
-            fetch(`http://${animalService}`),
-        ]);
-        const [adjective, color, animal] = await Promise.all([
-            adjRes.json(), 
-            colorRes.json(), 
-            animalRes.json()
-        ]);
-        res.status(200).send({
-            adjective,
-            color,
-            animal
-        });
-    }
-    catch(ex) {
-        console.error(ex);
-        res.status(500).send({
-            error: "Internal server error",
-            ex: ex,
-        });
-    }
+    const apigateway = new ApiGateway();
+    apigateway
+        .addCall(adjectiveService)
+        .addCall(colorService)
+        .addCall(animalService);
+
+    const [adjective, color, animal] = await apigateway.call();
+    
+    res.status(200).send({
+        adjective, 
+        color, 
+        animal,
+    });
+
+    
+
+    // try{
+    //     const [adjRes, colorRes, animalRes] = await Promise.all([
+    //         fetch(`http://${adjectiveService}`),
+    //         fetch(`http://${colorService}`),
+    //         fetch(`http://${animalService}`),
+    //     ]);
+    //     const [adjective, color, animal] = await Promise.all([
+    //         adjRes.json(), 
+    //         colorRes.json(), 
+    //         animalRes.json()
+    //     ]);
+    //     res.status(200).send({
+    //         adjective,
+    //         color,
+    //         animal
+    //     });
+    // }
+    // catch(ex) {
+    //     console.error(ex);
+    //     res.status(500).send({
+    //         error: "Internal server error",
+    //         ex: ex,
+    //     });
+    // }
 });
 
 // TODO: REMOVE THIS 
