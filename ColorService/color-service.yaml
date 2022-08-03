@@ -3,9 +3,11 @@ kind: Service
 metadata:
   name: color-service
 spec:
+  # type: LoadBalancer
   selector:
     app: color-service
   ports:
+  # - port: 53102
   - port: 80
     targetPort: 53100
 
@@ -26,7 +28,7 @@ spec:
     spec:
       containers:
       - name: color-service
-        image: sanjaygeorge16/color-service
+        image: sanjaygeorge16/color-service:v0.3.1
         resources:
           limits:
             memory: "128Mi"
