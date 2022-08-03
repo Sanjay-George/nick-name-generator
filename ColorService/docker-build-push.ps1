@@ -2,7 +2,7 @@
 #   First cd into the directory containing this file, and then run this. 
 #   Else Dockerfile of parent / other directories might get built instead.
 
-$version="0.3.1"
+$version="0.5.0"
 
 # remove all images with same name
 docker rmi $(docker images --format "{{.Repository}}:{{.Tag}}"|findstr "color-service")

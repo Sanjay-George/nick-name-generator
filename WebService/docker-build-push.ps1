@@ -1,4 +1,4 @@
-$version="0.3.0"
+$version="0.5.0"
 
 # remove all images with same name
 docker rmi $(docker images --format "{{.Repository}}:{{.Tag}}"|findstr "nick-name-generator")
