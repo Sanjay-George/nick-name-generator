@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
       - name: adjective-service
-        image: sanjaygeorge16/adjective-service:v0.3.1
+        image: sanjaygeorge16/adjective-service
         resources:
           limits:
             memory: "128Mi"

@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
       - name: color-service
-        image: sanjaygeorge16/color-service:v0.3.1
+        image: sanjaygeorge16/color-service
         resources:
           limits:
             memory: "128Mi"
