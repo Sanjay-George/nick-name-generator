@@ -27,7 +27,7 @@ spec:
     spec:
       containers:
       - name: nick-name-generator
-        image: sanjaygeorge16/nick-name-generator:v0.3.0
+        image: sanjaygeorge16/nick-name-generator
         resources:
           limits:
             memory: "128Mi"
