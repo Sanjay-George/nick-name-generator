@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@sanjay-george/nng-common": "^0.1.0",
     "express": "^4.18.1"
   }
 }
