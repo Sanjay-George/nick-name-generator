@@ -1,5 +1,14 @@
-# nick-name-generator - A Cloud 🌦️ Native App
-Some key 🔑 features of this app:
+# nick-name-generator - A Cloud-Native App 🌦️
+The app creates a cool nickname of the form `<adjective>-<color>-<animal>`. 
+
+Examples:
+```
+affectionate-garnet-goblins
+stupendous-hot-pink-gnomes
+technological-blush-cyclops
+```
+
+### Key 🔑 features of this app:
 * Microservice architecture
 * Simple API Gateway with partial fault tolerance 
 * Containerized using docker
