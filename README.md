@@ -1,10 +1,11 @@
 # nick-name-generator - A Cloud-Native App 🌦️
-The app creates a cool nickname of the form `<adjective>-<color>-<animal>`. 
+The app creates a "cool" nickname of the form `<adjective>-<color>-<animal>`. 
 
 Examples:
 ```
-affectionate-garnet-goblins
+nice-denim-dybbuk
 stupendous-hot-pink-gnomes
+affectionate-garnet-goblins
 technological-blush-cyclops
 ```
 
