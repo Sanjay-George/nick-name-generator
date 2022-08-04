@@ -6,6 +6,9 @@ Some key 🔑 features of this app:
 * K8s deployment with HPA
 * *Grafana and Prometheus (TBD, might be in a separate repo with IaC for deploying on AWS / Openstack)*
 
+### Architecture Diagram 
+![image](https://user-images.githubusercontent.com/10389062/182759961-f6903bd1-2caa-4074-a4a8-d57518264eef.png)
+
 ### Why use this app? 
 Absolutely no reason! 🤷‍♂️
 
