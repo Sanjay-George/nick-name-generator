@@ -11,7 +11,7 @@ technological-blush-cyclops
 
 ### Key 🔑 features of this app:
 * Microservice architecture
-* Simple API Gateway with partial fault tolerance 
+* Simple [API Gateway](WebService/apigateway.js) with partial fault tolerance 
 * Containerized using docker
 * K8s deployment with HPA
 * *Grafana and Prometheus (TBD, might be in a separate repo with IaC for deploying on AWS / Openstack)*
