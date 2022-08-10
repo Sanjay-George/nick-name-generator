@@ -32,7 +32,3 @@ Absolutely no reason! 🤷‍♂️
 ### Next steps 🪜
 1. Create a simple front end 
 2. Deploy on public cloud.
-
-### Questions to ponder 💡
-1. Can GraphQL be used instead of API gateway? Pros, cons
-2. Should APIGateways
