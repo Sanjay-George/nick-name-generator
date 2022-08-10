@@ -16,6 +16,11 @@ technological-blush-cyclops
 * K8s deployment with HPA
 * *Grafana and Prometheus (TBD, might be in a separate repo with IaC for deploying on AWS / Openstack)*
 
+
+### How to run 🏃‍♀️ it?
+1. Clone it.
+2. `kubectl apply -f .\AdjectiveService\adjective-service.yaml -f .\ColorService\color-service.yaml -f .\AnimalService\animal-service.yaml  -f .\WebService\nick-name-generator.yaml`
+
 ### Architecture Diagram 
 ![image](https://user-images.githubusercontent.com/10389062/182759961-f6903bd1-2caa-4074-a4a8-d57518264eef.png)
 
