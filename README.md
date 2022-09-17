@@ -30,5 +30,7 @@ Absolutely no reason! 🤷‍♂️
 **Although, I appreciate suggestions to improve the architecture or code. Please create an issue or a PR for the same**
 
 ### Next steps 🪜
-1. Create a simple front end 
-2. Deploy on public cloud.
+1. Deploy on public cloud (self or managed k8s)
+2. CI/CD pipeline to deploy on creation of tag
+3. Blue green deployment
+4. Unit tests within the pipeline
