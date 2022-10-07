@@ -12,5 +12,6 @@ export default {
         adjective: "adjective-service",
         color: "color-service",
         animal: "animal-service",
+        creature: "creature-service",
     }
 };

@@ -18,19 +18,25 @@ app.get("/nick-name/", async (req, res) => {
     const adjectiveService = services.adjective;
     const colorService = services.color;
     const animalService = services.animal;
+    const creatureService = services.creature;
 
     const apigateway = new ApiGateway();
     apigateway
         .addCall(adjectiveService)
         .addCall(colorService)
-        .addCall(animalService);
+        .addCall(animalService)
+        .addCall(creatureService);
 
-    const [adjective, color, animal] = await apigateway.call();
+    const [adjective, color, animal, creature] = await apigateway.call();
     
     res.status(200).send({
-        adjective, 
-        color, 
-        animal,
+        term: `${adjective.term}-${color.term}-${creature.term}`,
+        meta: {
+            adjective, 
+            color, 
+            animal,
+            creature,
+        }
     });
 
     
