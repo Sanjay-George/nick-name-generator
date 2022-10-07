@@ -32,5 +32,6 @@ Absolutely no reason! 🤷‍♂️
 ### Next steps 🪜
 1. Deploy on public cloud (self or managed k8s)
 2. CI/CD pipeline to deploy on creation of tag
-3. Blue green deployment
+3. Data persistence. Manage deployment and scaling of the DB.
 4. Unit tests within the pipeline
+5. Blue green deployment 
