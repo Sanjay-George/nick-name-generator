@@ -7,8 +7,7 @@ class CreatureLogic {
     private Random random; 
     public CreatureLogic() => random = new Random();
 
-    public string Get() {
-         IList<string> Creatures = new List<string> {
+    static IList<string> Creatures = new List<string> {
             "Cyclops",
             "Ogre",
             "Leprechauns",
@@ -36,6 +35,7 @@ class CreatureLogic {
             "Vampire"
         };
 
+    public string Get() {
         string creature = Creatures[random.Next(Creatures.Count)];
         return new Regex(@"\s+").Replace(creature, "-").ToLower();
     }
