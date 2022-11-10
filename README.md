@@ -22,7 +22,7 @@ technological-blush-cyclops
 2. `kubectl apply -f .\AdjectiveService\adjective-service.yaml -f .\ColorService\color-service.yaml -f .\AnimalService\animal-service.yaml  -f .\WebService\nick-name-generator.yaml`
 
 ### Architecture Diagram 
-![image](https://user-images.githubusercontent.com/10389062/182759961-f6903bd1-2caa-4074-a4a8-d57518264eef.png)
+![image](https://user-images.githubusercontent.com/10389062/194753979-7ede38d9-2fae-4124-afad-b76f492e4b8d.png)
 
 ### Why use this app? 
 Absolutely no reason! 🤷‍♂️
