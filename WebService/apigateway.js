@@ -16,7 +16,6 @@ export default class ApiGateway {
     }
 
     async call() {
-        console.log('making call', this.calls);
         const { calls } = this;
         if(!calls.length)  return [];
 
