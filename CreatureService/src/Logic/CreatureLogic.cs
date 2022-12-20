@@ -2,7 +2,7 @@ using System.Text.RegularExpressions;
 
 namespace CreatureService.Logic;
     
-class CreatureLogic {
+public class CreatureLogic {
 
     private Random random; 
     public CreatureLogic() => random = new Random();

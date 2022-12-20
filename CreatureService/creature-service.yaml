@@ -7,7 +7,6 @@ spec:
   selector:
     app: creature-service
   ports:
-  # - port: 53101
   - port: 80
     targetPort: 80
 
