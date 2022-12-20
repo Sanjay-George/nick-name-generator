@@ -19,7 +19,7 @@ technological-blush-cyclops
 
 ### How to run 🏃‍♀️ it?
 1. Clone it.
-2. `kubectl apply -f .\AdjectiveService\adjective-service.yaml -f .\ColorService\color-service.yaml -f .\AnimalService\animal-service.yaml  -f .\WebService\nick-name-generator.yaml`
+2. `kubectl apply -f AdjectiveService/adjective-service.yaml -f ColorService/color-service.yaml -f AnimalService/animal-service.yaml -f CreatureService/creature-service.yaml -f WebService/nick-name-generator.yaml`
 
 ### Architecture Diagram 
 ![image](https://user-images.githubusercontent.com/10389062/194753979-7ede38d9-2fae-4124-afad-b76f492e4b8d.png)
@@ -30,8 +30,10 @@ Absolutely no reason! 🤷‍♂️
 **Although, I appreciate suggestions to improve the architecture or code. Please create an issue or a PR for the same**
 
 ### Next steps 🪜
-1. Deploy on public cloud (self or managed k8s)
+1. Deploy on GKE
 2. CI/CD pipeline to deploy on creation of tag
 3. Data persistence. Manage deployment and scaling of the DB.
 4. Unit tests within the pipeline
 5. Blue green deployment 
+
+[Project Dashboard](https://github.com/users/Sanjay-George/projects/2/views/4?sortedBy%5Bdirection%5D=desc&sortedBy%5BcolumnId%5D=Status)
