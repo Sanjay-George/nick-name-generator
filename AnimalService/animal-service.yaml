@@ -29,10 +29,6 @@ spec:
       containers:
       - name: animal-service
         image: sanjaygeorge16/animal-service
-        resources:
-          limits:
-            memory: "128Mi"
-            cpu: "100m"
         ports:
         - containerPort: 53100
 

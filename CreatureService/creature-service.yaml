@@ -28,10 +28,6 @@ spec:
       containers:
       - name: creature-service
         image: sanjaygeorge16/creature-service
-        resources:
-          limits:
-            memory: "128Mi"
-            cpu: "100m"
         ports:
         - containerPort: 80
 

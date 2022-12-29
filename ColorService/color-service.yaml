@@ -29,10 +29,6 @@ spec:
       containers:
       - name: color-service
         image: sanjaygeorge16/color-service
-        resources:
-          limits:
-            memory: "128Mi"
-            cpu: "100m"
         ports:
         - containerPort: 53100
 

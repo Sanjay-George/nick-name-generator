@@ -29,10 +29,6 @@ spec:
       containers:
       - name: adjective-service
         image: sanjaygeorge16/adjective-service
-        resources:
-          limits:
-            memory: "128Mi"
-            cpu: "100m"
         ports:
         - containerPort: 53100
 
