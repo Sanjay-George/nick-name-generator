@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: color-service
 spec:
-  # type: LoadBalancer
+  type: LoadBalancer
   selector:
     app: color-service
   ports:

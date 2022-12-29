@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: creature-service
 spec:
-  # type: LoadBalancer
+  type: LoadBalancer
   selector:
     app: creature-service
   ports:

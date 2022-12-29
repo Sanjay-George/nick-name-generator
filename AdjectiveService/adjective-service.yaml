@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: adjective-service
 spec:
-  # type: LoadBalancer
+  type: LoadBalancer
   selector:
     app: adjective-service
   ports:

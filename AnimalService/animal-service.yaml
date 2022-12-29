@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: animal-service
 spec:
-  # type: LoadBalancer
+  type: LoadBalancer
   selector:
     app: animal-service
   ports:
