@@ -30,10 +30,7 @@ Absolutely no reason! 🤷‍♂️
 **Although, I appreciate suggestions to improve the architecture or code. Please create an issue or a PR for the same**
 
 ### Next steps 🪜
-1. Deploy on GKE
-2. CI/CD pipeline to deploy on creation of tag
-3. Data persistence. Manage deployment and scaling of the DB.
-4. Unit tests within the pipeline
-5. Blue green deployment 
+1. Ingress
+2. Volumes and state persistence
 
 [Project Dashboard](https://github.com/users/Sanjay-George/projects/2/views/4?sortedBy%5Bdirection%5D=desc&sortedBy%5BcolumnId%5D=Status)
