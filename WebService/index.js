@@ -17,54 +17,24 @@ app.get("/", (req, res) => {
 app.get("/nick-name/", async (req, res) => {
     const adjectiveService = services.adjective;
     const colorService = services.color;
-    const animalService = services.animal;
     const creatureService = services.creature;
 
     const apigateway = new ApiGateway();
     apigateway
         .addCall(adjectiveService)
         .addCall(colorService)
-        .addCall(animalService)
         .addCall(creatureService);
 
-    const [adjective, color, animal, creature] = await apigateway.call();
+    const [adjective, color, creature] = await apigateway.call();
     
     res.status(200).send({
         term: `${adjective.term}-${color.term}-${creature.term}`,
         meta: {
             adjective, 
-            color, 
-            animal,
+            color,
             creature,
         }
     });
-
-    
-
-    // try{
-    //     const [adjRes, colorRes, animalRes] = await Promise.all([
-    //         fetch(`http://${adjectiveService}`),
-    //         fetch(`http://${colorService}`),
-    //         fetch(`http://${animalService}`),
-    //     ]);
-    //     const [adjective, color, animal] = await Promise.all([
-    //         adjRes.json(), 
-    //         colorRes.json(), 
-    //         animalRes.json()
-    //     ]);
-    //     res.status(200).send({
-    //         adjective,
-    //         color,
-    //         animal
-    //     });
-    // }
-    // catch(ex) {
-    //     console.error(ex);
-    //     res.status(500).send({
-    //         error: "Internal server error",
-    //         ex: ex,
-    //     });
-    // }
 });
 
 // TODO: REMOVE THIS 

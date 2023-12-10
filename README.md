@@ -1,5 +1,5 @@
 # nick-name-generator - A Cloud-Native App 🌦️
-The app creates a "cool" nickname of the form `<adjective>-<color>-<animal>`. 
+The app creates a "cool" nickname of the form `<adjective>-<color>-<creature>`. 
 
 Examples:
 ```
@@ -19,7 +19,7 @@ technological-blush-cyclops
 
 ### How to run 🏃‍♀️ it?
 1. Clone it.
-2. `kubectl apply -f AdjectiveService/adjective-service.yaml -f ColorService/color-service.yaml -f AnimalService/animal-service.yaml -f CreatureService/creature-service.yaml -f WebService/nick-name-generator.yaml`
+2. `kubectl apply -f AdjectiveService/adjective-service.yaml -f ColorService/color-service.yaml -f CreatureService/creature-service.yaml -f WebService/nick-name-generator.yaml`
 
 ### Architecture Diagram 
 ![image](https://user-images.githubusercontent.com/10389062/194753979-7ede38d9-2fae-4124-afad-b76f492e4b8d.png)
