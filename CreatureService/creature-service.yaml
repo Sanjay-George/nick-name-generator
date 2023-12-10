@@ -29,6 +29,9 @@ spec:
       - name: creature-service
         image: sanjaygeorge16/creature-service
         resources:
+          requests:
+            memory: "50Mi"
+            cpu: "10m"
           limits:
             memory: "128Mi"
             cpu: "100m"
