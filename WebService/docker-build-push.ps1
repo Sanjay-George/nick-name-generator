@@ -1,7 +1,7 @@
-$version="0.6.0"
+$version="0.7.0"
 
 # remove all images with same name
-docker rmi $(docker images --format "{{.Repository}}:{{.Tag}}"|findstr "nick-name-generator")
+docker rmi $(docker images --format "{{.Repository}}:{{.Tag}}"| findstr "nick-name-generator")
 
 # create local docker build
 docker build -t nick-name-generator .
